@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ad109885-70b0-44b2-b4b9-aac84f6bb068" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/credentials.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/credentials.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +56,8 @@
       <option name="presentableId" value="Default" />
       <updated>1600193152334</updated>
       <workItem from="1600193153458" duration="7476000" />
-      <workItem from="1600200968908" duration="38000" />
+      <workItem from="1600200968908" duration="55000" />
+      <workItem from="1600201169012" duration="95000" />
     </task>
     <task id="LOCAL-00001" summary="secure RN apps with backoffice">
       <created>1600200483554</created>
@@ -65,7 +66,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600200483554</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="secure RN apps with backoffice">
+      <created>1600201011034</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1600201011034</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -76,10 +84,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="secure RN apps with backoffice" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1280" y="28" width="1096" height="1052" key="CommitChangelistDialog2" timestamp="1600200482225">
+    <state x="1280" y="28" width="1096" height="1052" key="CommitChangelistDialog2" timestamp="1600201010894">
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
-    <state x="1280" y="28" width="1096" height="1052" key="CommitChangelistDialog2/1280.0.1920.1080/0.28.1280.950@1280.0.1920.1080" timestamp="1600200482225" />
+    <state x="1280" y="28" width="1096" height="1052" key="CommitChangelistDialog2/1280.0.1920.1080/0.28.1280.950@1280.0.1920.1080" timestamp="1600201010894" />
     <state x="1970" y="255" width="541" height="590" key="FileChooserDialogImpl" timestamp="1600200421475">
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
@@ -104,9 +112,9 @@
     </state>
     <state width="1252" height="224" key="GridCell.Tab.0.right/1280.0.1920.1080/0.28.1280.950@0.28.1280.950" timestamp="1600197861106" />
     <state width="1892" height="254" key="GridCell.Tab.0.right/1280.0.1920.1080/0.28.1280.950@1280.0.1920.1080" timestamp="1600200673206" />
-    <state x="1735" y="222" width="1000" height="660" key="Vcs.Push.Dialog.v2" timestamp="1600200584408">
+    <state x="1735" y="222" width="1000" height="660" key="Vcs.Push.Dialog.v2" timestamp="1600201014943">
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
-    <state x="1735" y="222" width="1000" height="660" key="Vcs.Push.Dialog.v2/1280.0.1920.1080/0.28.1280.950@1280.0.1920.1080" timestamp="1600200584408" />
+    <state x="1735" y="222" width="1000" height="660" key="Vcs.Push.Dialog.v2/1280.0.1920.1080/0.28.1280.950@1280.0.1920.1080" timestamp="1600201014943" />
   </component>
 </project>

@@ -32,6 +32,11 @@ router.post('/login', function (req, res, next) {
   });
 });
 
+router.get('/logout', function (req, res, next) {
+  res.redirect("/credentials/login");
+  req.session.destroy();
+});
+
 function skipRoutes(req, res, next) {
 
   if (req.session.authUser) {
