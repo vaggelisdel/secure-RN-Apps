@@ -1,0 +1,23 @@
+<!-- sidebar-wrapper  -->
+<main class="page-content">
+    <div class="container-fluid">
+        <h2>Create New App</h2>
+        <hr>
+        <div class="container col-sm-6">
+            <form action="/addApp" method="POST">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">App Name</span>
+                    </div>
+                    <input required name="appName" type="text" class="form-control" placeholder="Enter App's Name"
+                           aria-label="App Name" aria-describedby="basic-addon1">
+                    <input type="hidden" value="{{session.UserID}}" name="userId">
+                </div>
+                <div class="input-group mb-3">
+                    <button class="form-control btn btn-primary">Create App</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+<!-- page-content" -->

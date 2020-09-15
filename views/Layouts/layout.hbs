@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
+    <title>{{title}}</title>
+
+    <link href="/stylesheets/dashboard.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+
+    <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="/javascripts/dashboardtemplate.js"></script>
+</head>
+<body>
+<div class="page-wrapper chiller-theme toggled">
+    <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+        <i class="fa fa-bars"></i>
+    </a>
+    <nav id="sidebar" class="sidebar-wrapper">
+        <div class="sidebar-content">
+            <div class="sidebar-brand">
+                <a href="/">My Apps</a>
+                <div id="close-sidebar">
+                    <i class="fa fa-times"></i>
+                </div>
+            </div>
+            <div class="sidebar-header">
+                <div class="user-pic">
+                    <img class="img-responsive img-rounded"
+                         src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+                         alt="User picture">
+                </div>
+                <div class="user-info">
+                    <span class="user-name">{{session.UserEmail}}</span>
+                    <span class="user-role">User</span>
+                    <span class="user-status">
+          </span>
+                </div>
+            </div>
+            <!-- sidebar-header  -->
+            <!-- sidebar-search  -->
+            <div class="sidebar-menu">
+                <ul>
+                    <li class="header-menu">
+                        <span>My Apps</span>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <i class="fa fa-tachometer"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/addApp">
+                            <i class="fa fa-users"></i>
+                            <span>Create App</span>
+                        </a>
+                    </li>
+                    <li class="{{#if activeAlerts}}active{{/if}}">
+                        <a href="/allApps">
+                            <i class="fa fa-exclamation-triangle"></i>
+                            <span>All Apps</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- sidebar-menu  -->
+        </div>
+        <!-- sidebar-content  -->
+        <div class="sidebar-footer">
+            <a href="/credentials/logout">
+                <i class="fa fa-power-off"> Logout</i>
+            </a>
+        </div>
+    </nav>
+    {{{body}}}
+</div>
+</body>
+<script>
+    $(function (){
+        if (screen.width < 1000) {
+            $(".chiller-theme").removeClass("toggled")
+        }
+    });
+</script>
+</html>

@@ -1,0 +1,83 @@
+<!-- sidebar-wrapper  -->
+<main class="page-content">
+    <div class="container-fluid">
+        <h2>All Apps</h2>
+        <hr>
+        <div class="col-md-10 col-md-offset-1">
+
+            <div class="panel panel-default panel-table">
+                <div class="panel-body">
+                    <div style="overflow-x:auto;">
+                        <table id="appsTable" class="table table-striped table-bordered table-list">
+                            <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {{#each allApps}}
+                                <tr>
+                                    <td>{{this.name}}</td>
+                                    <td>{{this.createdDate}}</td>
+                                    <td>
+                                        {{#if this.active}}
+                                            <span class="badge badge-success">Active (Running)</span>
+                                        {{else}}
+                                            <span class="badge badge-danger">Incative (Not working)</span>
+                                        {{/if}}
+                                    </td>
+                                    <td>
+                                        {{#if this.active}}
+                                            <button value="{{this._id}}" class="btn btn-primary disableApp"><i
+                                                    class="fa fa-times"></i> &nbsp;Disable App
+                                            </button>
+                                        {{else}}
+                                            <button value="{{this._id}}" class="btn btn-primary enableApp"><i
+                                                    class="fa fa-check"></i> &nbsp;Enable App
+                                            </button>
+                                        {{/if}}
+                                    </td>
+                                </tr>
+                            {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- /.modal-dialog -->
+</main>
+<!-- page-content" -->
+
+
+<script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<script>
+    $(function () {
+        $('#appsTable').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": true,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+        });
+
+        $(".enableApp").click(function () {
+            if (confirm("Are your sure to enable this app?")) {
+                window.location.href = "/enableApp/" + this.value;
+            }
+        });
+        $(".disableApp").click(function () {
+            var message = prompt("Please enter a message:", "It appears in the app");
+            if (message == null || message === "") {
+            } else {
+                window.location.href = "/disableApp/" + this.value + "/" + message;
+            }
+        });
+    });
+</script>
